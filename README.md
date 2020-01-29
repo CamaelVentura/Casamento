@@ -5,7 +5,11 @@ Ele vai ter as seguintes funções:
 #
 
 # Convidados
-*Confirmar presença no casamento
+*Adicionar convidados - só os noivos 
+
+*Confirmar presença no casamento - qualquer pessoa na lista de convidados
+
+*Adicionar/Alterar quantidade de adultos e crianças confirmados
 
 *Mostrar lista de convidados confirmados - só os noivos 
 
