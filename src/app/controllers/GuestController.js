@@ -22,20 +22,36 @@ class GuestController {
         .json({ error: 'Voce precisa digitar o nome que esta no convite' });
     }
 
-    const { id, confirmed } = await Guest.findOne({
+    const guest = await Guest.findOne({
       where: {
         name
       }
     });
 
-    if (confirmed) {
-      return res.status(400).json({ error: 'Voce ja confirmou presenca' });
+    if (guest === null) {
+      return res
+        .status(400)
+        .json({ error: 'Voce precisa digitar o nome como esta no convite' });
     }
 
+    const { id } = guest;
+
     return res.json({
-      name,
       id
     });
+  }
+
+  async update(req, res) {
+    const guest = await Guest.findByPk(req.params.id);
+
+    const { expected_adults, expected_kids } = req.body;
+
+    const { name } = await guest.update({
+      expected_adults,
+      expected_kids
+    });
+
+    return res.json(name);
   }
 }
 

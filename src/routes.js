@@ -6,6 +6,7 @@ import ConfirmController from './app/controllers/ConfirmController';
 const routes = new Router();
 
 routes.post('/convidados', GuestController.store);
+routes.put('/convidados/:id', GuestController.update);
 
 routes.post('/confirmar', GuestController.show);
 
