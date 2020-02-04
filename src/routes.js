@@ -1,17 +1,13 @@
-import { Router } from 'express';
+import express from 'express';
 
-import GuestController from './app/controllers/GuestController';
-import ConfirmController from './app/controllers/ConfirmController';
+import routesGet from './routes/get';
+import routesPost from './routes/post';
+import routesPut from './routes/put';
 
-const routes = new Router();
+const app = express();
 
-routes.post('/convidados', GuestController.store);
-routes.put('/convidados/:id', GuestController.update);
+app.use(routesGet);
+app.use(routesPost);
+app.use(routesPut);
 
-routes.post('/confirmar', GuestController.show);
-
-routes.put('/confirmar/:id', ConfirmController.update);
-
-routes.get('/confirmados', ConfirmController.index);
-
-module.exports = routes;
+module.exports = app;
