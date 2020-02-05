@@ -1,13 +1,13 @@
 import express from 'express';
 
-import routesGet from './routes/get';
-import routesPost from './routes/post';
-import routesPut from './routes/put';
+import confirmados from './routes/confirmados';
+import confirmar from './routes/confirmar';
+import convidados from './routes/convidados';
 
 const app = express();
 
-app.use(routesGet);
-app.use(routesPost);
-app.use(routesPut);
+app.use('/confirmados', confirmados);
+app.use('/confirmar', confirmar);
+app.use('/convidados', convidados);
 
 module.exports = app;

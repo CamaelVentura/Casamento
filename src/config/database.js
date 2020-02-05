@@ -1,11 +1,11 @@
-require('dotenv/config');
+import * as database from '../constants/database';
 
 module.exports = {
   dialect: 'postgres',
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  host: database.DB_HOST,
+  username: database.DB_USER,
+  password: database.DB_PASS,
+  database: database.DB_NAME,
   define: {
     timestamps: true,
     underscored: true,
