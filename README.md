@@ -5,9 +5,8 @@ Ele vai ter as seguintes funções:
 #
 
 # Convidados
-*Adicionar convidados - só os noivos 
 
-*Confirmar presença no casamento - qualquer pessoa na lista de convidados
+*Confirmar presença no casamento
 
 *Adicionar/Alterar quantidade de adultos e crianças confirmados
 
@@ -22,3 +21,8 @@ Ele vai ter as seguintes funções:
 # Sobre casal
 
 *Mostrar fotos e texto do Casal - apresentação do casal
+
+# Mural de mensagens
+
+*Adiciona mensagens de felicitações ao casal
+*Mural com todas as mensagens
